@@ -1,0 +1,68 @@
+<h1>
+  Edit weighting #<%= @weighting.id %>
+</h1>
+
+<hr>
+
+<!-- Form weighting start -->
+<form action="/update_weighting/<%= @weighting.id %>" method="post">
+<!-- Form weighting end -->
+
+  <!-- Label and input for earring_id start -->
+  <div class="form-group">
+    <label for="earring_id">
+      Earring
+    </label>
+
+    <!-- Input for earring_id start -->
+    <input type="text" id="earring_id" name="earring_id" class="form-control" value="<%= @weighting.earring_id %>">
+    <!-- Input for earring_id end -->
+  </div>
+  <!-- Label and input for earring_id end -->
+
+  <!-- Label and input for weight start -->
+  <div class="form-group">
+    <label for="weight">
+      Weight
+    </label>
+
+    <!-- Input for weight start -->
+    <input type="text" id="weight" name="weight" class="form-control" value="<%= @weighting.weight %>">
+    <!-- Input for weight end -->
+  </div>
+  <!-- Label and input for weight end -->
+
+  <!-- Label and input for cattle_id start -->
+  <div class="form-group">
+    <label for="cattle_id">
+      Cattle
+    </label>
+
+    <!-- Input for cattle_id start -->
+    <input type="text" id="cattle_id" name="cattle_id" class="form-control" value="<%= @weighting.cattle_id %>">
+    <!-- Input for cattle_id end -->
+  </div>
+  <!-- Label and input for cattle_id end -->
+
+  <!-- Label and input for lot start -->
+  <div class="form-group">
+    <label for="lot">
+      Lot
+    </label>
+
+    <!-- Input for lot start -->
+    <input type="text" id="lot" name="lot" class="form-control" value="<%= @weighting.lot %>">
+    <!-- Input for lot end -->
+  </div>
+  <!-- Label and input for lot end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Update weighting
+  </button>
+</form>
+
+<hr>
+
+<a href="/weightings">
+  Go back
+</a>
