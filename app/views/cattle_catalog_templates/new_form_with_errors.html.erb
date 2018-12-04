@@ -1,4 +1,3 @@
-<!-- Validation failure messages -->
 <% if @cattle_catalog.present? %>
   <% if @cattle_catalog.errors.any? %>
     <% @cattle_catalog.errors.full_messages.each do |message| %>
@@ -16,141 +15,95 @@
 
 <hr>
 
-<!-- Form cattle_catalog start -->
 <form action="/create_cattle_catalog" method="post">
-<!-- Form cattle_catalog end -->
 
-  <!-- Label and input for first_weight start -->
   <div class="form-group">
     <label for="first_weight">
       First weight
     </label>
 
-    <!-- Input for first_weight start -->
     <input type="text" id="first_weight" name="first_weight" class="form-control" value="<%= @cattle_catalog.first_weight %>">
-    <!-- Input for first_weight end -->
   </div>
-  <!-- Label and input for first_weight end -->
 
-  <!-- Label and input for source start -->
   <div class="form-group">
     <label for="source">
       Source
     </label>
 
-    <!-- Input for source start -->
     <input type="text" id="source" name="source" class="form-control" value="<%= @cattle_catalog.source %>">
-    <!-- Input for source end -->
   </div>
-  <!-- Label and input for source end -->
 
-  <!-- Label and input for race start -->
   <div class="form-group">
     <label for="race">
       Race
     </label>
 
-    <!-- Input for race start -->
     <input type="text" id="race" name="race" class="form-control" value="<%= @cattle_catalog.race %>">
-    <!-- Input for race end -->
   </div>
-  <!-- Label and input for race end -->
 
-  <!-- Label and input for gender start -->
   <div class="form-group">
     <label for="gender">
       Gender
     </label>
 
-    <!-- Input for gender start -->
     <input type="text" id="gender" name="gender" class="form-control" value="<%= @cattle_catalog.gender %>">
-    <!-- Input for gender end -->
   </div>
-  <!-- Label and input for gender end -->
 
-  <!-- Label and input for price_per_kilo start -->
   <div class="form-group">
     <label for="price_per_kilo">
       Price per kilo
     </label>
 
-    <!-- Input for price_per_kilo start -->
     <input type="text" id="price_per_kilo" name="price_per_kilo" class="form-control" value="<%= @cattle_catalog.price_per_kilo %>">
-    <!-- Input for price_per_kilo end -->
   </div>
-  <!-- Label and input for price_per_kilo end -->
 
-  <!-- Label and input for father start -->
   <div class="form-group">
     <label for="father">
       Father
     </label>
 
-    <!-- Input for father start -->
     <input type="text" id="father" name="father" class="form-control" value="<%= @cattle_catalog.father %>">
-    <!-- Input for father end -->
   </div>
-  <!-- Label and input for father end -->
 
-  <!-- Label and input for earring_id start -->
   <div class="form-group">
     <label for="earring_id">
       Earring
     </label>
 
-    <!-- Input for earring_id start -->
     <input type="text" id="earring_id" name="earring_id" class="form-control" value="<%= @cattle_catalog.earring_id %>">
-    <!-- Input for earring_id end -->
   </div>
-  <!-- Label and input for earring_id end -->
 
-  <!-- Label and input for purchase_or_weaning_date start -->
   <div class="form-group">
     <label for="purchase_or_weaning_date">
       Purchase or weaning date
     </label>
 
-    <!-- Input for purchase_or_weaning_date start -->
     <input type="text" id="purchase_or_weaning_date" name="purchase_or_weaning_date" class="form-control" value="<%= @cattle_catalog.purchase_or_weaning_date %>">
-    <!-- Input for purchase_or_weaning_date end -->
   </div>
-  <!-- Label and input for purchase_or_weaning_date end -->
 
-  <!-- Label and input for mother_earring_id start -->
   <div class="form-group">
     <label for="mother_earring_id">
       Mother earring
     </label>
 
-    <!-- Input for mother_earring_id start -->
     <input type="text" id="mother_earring_id" name="mother_earring_id" class="form-control" value="<%= @cattle_catalog.mother_earring_id %>">
-    <!-- Input for mother_earring_id end -->
   </div>
-  <!-- Label and input for mother_earring_id end -->
 
-  <!-- Label and input for birthdate start -->
   <div class="form-group">
     <label for="birthdate">
       Birthdate
     </label>
 
-    <!-- Input for birthdate start -->
     <input type="text" id="birthdate" name="birthdate" class="form-control" value="<%= @cattle_catalog.birthdate %>">
-    <!-- Input for birthdate end -->
   </div>
-  <!-- Label and input for birthdate end -->
 
-  <!-- Label and input for status start -->
   <div class="form-group">
     <label for="status">
       Status
     </label>
 
-    <!-- Input for status start -->
     <input type="text" id="status" name="status" class="form-control" value="<%= @cattle_catalog.status %>">
-    <!-- Input for status end -->
   </div>
-  <!-- Label and input for status end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Create cattle catalog

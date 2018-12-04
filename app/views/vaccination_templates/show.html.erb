@@ -11,46 +11,37 @@
         </a>
       </div>
 
-      <!-- Edit link vaccination start -->
       <div class="col">
         <a href="/vaccinations/<%= @vaccination.id %>/edit" class="btn btn-block btn-outline-secondary">
           Edit vaccination
         </a>
       </div>
-      <!-- Edit link vaccination end -->
 
-      <!-- Delete link vaccination start -->
       <div class="col">
         <a href="/delete_vaccination/<%= @vaccination.id %>" class="btn btn-block btn-outline-secondary">
           Delete vaccination
         </a>
       </div>
-      <!-- Delete link vaccination end -->
     </div>
 
     <dl>
       <dt>
         Earrring
       </dt>
-      <!-- Display earrring_id start -->
       <dd>
         <%= @vaccination.earrring_id %>
       </dd>
-      <!-- Display earrring_id end -->
 
       <dt>
         Vaccine type
       </dt>
-      <!-- Display vaccine_type start -->
       <dd>
         <%= @vaccination.vaccine_type %>
       </dd>
-      <!-- Display vaccine_type end -->
 
       <dt>
         Cattle
       </dt>
-      <!-- Display cattle_id start -->
       <dd>
         <% if @vaccination.cattle.present? %>
           <a href="/cattle_catalogs/<%= @vaccination.cattle_id %>">
@@ -58,28 +49,21 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display cattle_id end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@vaccination.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@vaccination.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
-<!-- Show Page Customization end -->

@@ -1,4 +1,3 @@
-<!-- Validation failure messages -->
 <% if @vaccination.errors.any? %>
   <% @vaccination.errors.full_messages.each do |message| %>
     <div class="alert">
@@ -13,45 +12,31 @@
 
 <hr>
 
-<!-- Form vaccination start -->
 <form action="/update_vaccination/<%= @vaccination.id %>" method="post">
-<!-- Form vaccination end -->
 
-  <!-- Label and input for earrring_id start -->
   <div class="form-group">
     <label for="earrring_id">
       Earrring
     </label>
 
-    <!-- Input for earrring_id start -->
     <input type="text" id="earrring_id" name="earrring_id" class="form-control" value="<%= @vaccination.earrring_id %>">
-    <!-- Input for earrring_id end -->
   </div>
-  <!-- Label and input for earrring_id end -->
 
-  <!-- Label and input for vaccine_type start -->
   <div class="form-group">
     <label for="vaccine_type">
       Vaccine type
     </label>
 
-    <!-- Input for vaccine_type start -->
     <input type="text" id="vaccine_type" name="vaccine_type" class="form-control" value="<%= @vaccination.vaccine_type %>">
-    <!-- Input for vaccine_type end -->
   </div>
-  <!-- Label and input for vaccine_type end -->
 
-  <!-- Label and input for cattle_id start -->
   <div class="form-group">
     <label for="cattle_id">
       Cattle
     </label>
 
-    <!-- Input for cattle_id start -->
     <%= select_tag(:cattle_id, options_from_collection_for_select(CattleCatalog.all, :id, :earring_id, @vaccination.cattle_id), :class => "form-control") %>
-    <!-- Input for cattle_id end -->
   </div>
-  <!-- Label and input for cattle_id end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Update vaccination
