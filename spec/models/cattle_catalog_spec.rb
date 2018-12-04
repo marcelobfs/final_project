@@ -4,6 +4,8 @@ RSpec.describe CattleCatalog, type: :model do
   
     describe "Direct Associations" do
 
+    it { should have_many(:pregnancies) }
+
     end
 
     describe "InDirect Associations" do

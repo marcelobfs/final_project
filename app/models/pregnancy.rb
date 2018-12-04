@@ -1,6 +1,10 @@
 class Pregnancy < ApplicationRecord
   # Direct associations
 
+  belongs_to :cattle,
+             :class_name => "CattleCatalog",
+             :counter_cache => true
+
   # Indirect associations
 
   # Validations
