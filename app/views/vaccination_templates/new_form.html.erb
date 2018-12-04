@@ -1,0 +1,57 @@
+<h1>
+  Add a new vaccination
+</h1>
+
+
+<hr>
+
+<!-- Form vaccination start -->
+<form action="/create_vaccination" method="post">
+<!-- Form vaccination end -->
+
+  <!-- Label and input for earrring_id start -->
+  <div class="form-group">
+    <label for="earrring_id">
+      Earrring
+    </label>
+
+    <!-- Input for earrring_id start -->
+    <input type="text" id="earrring_id" name="earrring_id" class="form-control">
+    <!-- Input for earrring_id end -->
+  </div>
+  <!-- Label and input for earrring_id end -->
+
+  <!-- Label and input for vaccine_type start -->
+  <div class="form-group">
+    <label for="vaccine_type">
+      Vaccine type
+    </label>
+
+    <!-- Input for vaccine_type start -->
+    <input type="text" id="vaccine_type" name="vaccine_type" class="form-control">
+    <!-- Input for vaccine_type end -->
+  </div>
+  <!-- Label and input for vaccine_type end -->
+
+  <!-- Label and input for cattle_id start -->
+  <div class="form-group">
+    <label for="cattle_id">
+      Cattle
+    </label>
+
+    <!-- Input for cattle_id start -->
+    <input type="text" id="cattle_id" name="cattle_id" class="form-control">
+    <!-- Input for cattle_id end -->
+  </div>
+  <!-- Label and input for cattle_id end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Create vaccination
+  </button>
+</form>
+
+<hr>
+
+<a href="/vaccinations">
+  Go back
+</a>
