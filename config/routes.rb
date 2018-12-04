@@ -82,6 +82,7 @@ Rails.application.routes.draw do
   # CREATE
   get("/pregnancies/new", { :controller => "pregnancies", :action => "new_form" })
   post("/create_pregnancy", { :controller => "pregnancies", :action => "create_row" })
+  post("/create_pregnancy_from_cattle_catalog", { :controller => "pregnancies", :action => "create_row_from_cattle_catalog" })
 
   # READ
   get("/pregnancies", { :controller => "pregnancies", :action => "index" })
@@ -121,6 +122,7 @@ Rails.application.routes.draw do
   # CREATE
   get("/vaccinations/new", { :controller => "vaccinations", :action => "new_form" })
   post("/create_vaccination", { :controller => "vaccinations", :action => "create_row" })
+  post("/create_vaccination_from_cattle_catalog", { :controller => "vaccinations", :action => "create_row_from_cattle_catalog" })
 
   # READ
   get("/vaccinations", { :controller => "vaccinations", :action => "index" })
@@ -141,6 +143,7 @@ Rails.application.routes.draw do
   # CREATE
   get("/weightings/new", { :controller => "weightings", :action => "new_form" })
   post("/create_weighting", { :controller => "weightings", :action => "create_row" })
+  post("/create_weighting_from_cattle_catalog", { :controller => "weightings", :action => "create_row_from_cattle_catalog" })
 
   # READ
   get("/weightings", { :controller => "weightings", :action => "index" })

@@ -34,6 +34,23 @@ class PregnanciesController < ApplicationController
     end
   end
 
+  def create_row_from_cattle_catalog
+    @pregnancy = Pregnancy.new
+
+    @pregnancy.earring_id = params.fetch("earring_id")
+    @pregnancy.bull_name = params.fetch("bull_name")
+    @pregnancy.born = params.fetch("born")
+    @pregnancy.cattle_id = params.fetch("cattle_id")
+
+    if @pregnancy.valid?
+      @pregnancy.save
+
+      redirect_to("/cattle_catalogs/#{@pregnancy.cattle_id}", notice: "Pregnancy created successfully.")
+    else
+      render("pregnancy_templates/new_form_with_errors.html.erb")
+    end
+  end
+
   def edit_form
     @pregnancy = Pregnancy.find(params.fetch("prefill_with_id"))
 
