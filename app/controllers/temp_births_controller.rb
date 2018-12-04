@@ -1,6 +1,7 @@
 class TempBirthsController < ApplicationController
   def index
-    @temp_births = TempBirth.page(params[:page]).per(10)
+    @q = TempBirth.ransack(params[:q])
+    @temp_births = @q.result(:distinct => true).page(params[:page]).per(10)
 
     render("temp_birth_templates/index.html.erb")
   end

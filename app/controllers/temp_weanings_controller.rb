@@ -1,6 +1,7 @@
 class TempWeaningsController < ApplicationController
   def index
-    @temp_weanings = TempWeaning.page(params[:page]).per(10)
+    @q = TempWeaning.ransack(params[:q])
+    @temp_weanings = @q.result(:distinct => true).page(params[:page]).per(10)
 
     render("temp_weaning_templates/index.html.erb")
   end

@@ -1,6 +1,7 @@
 class CattleCatalogsController < ApplicationController
   def index
-    @cattle_catalogs = CattleCatalog.page(params[:page]).per(10)
+    @q = CattleCatalog.ransack(params[:q])
+    @cattle_catalogs = @q.result(:distinct => true).includes(:pregnancies, :weightings, :vaccinations, :death, :cattle_sale).page(params[:page]).per(10)
 
     render("cattle_catalog_templates/index.html.erb")
   end
