@@ -1,4 +1,6 @@
 ActiveAdmin.register TempBirth do
+
+ permit_params :earring_id, :gender, :mother_earring_id, :race, :birthdate
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
