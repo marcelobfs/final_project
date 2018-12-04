@@ -1,0 +1,68 @@
+<!-- Validation failure messages -->
+<% if @death.present? %>
+  <% if @death.errors.any? %>
+    <% @death.errors.full_messages.each do |message| %>
+      <div class="alert alert-danger">
+        <%= message %>
+      </div>
+    <% end %>
+  <% end %>
+<% end %>
+
+<h1>
+  Add a new death
+</h1>
+
+
+<hr>
+
+<!-- Form death start -->
+<form action="/create_death" method="post">
+<!-- Form death end -->
+
+  <!-- Label and input for earring_id start -->
+  <div class="form-group">
+    <label for="earring_id">
+      Earring
+    </label>
+
+    <!-- Input for earring_id start -->
+    <input type="text" id="earring_id" name="earring_id" class="form-control" value="<%= @death.earring_id %>">
+    <!-- Input for earring_id end -->
+  </div>
+  <!-- Label and input for earring_id end -->
+
+  <!-- Label and input for cause start -->
+  <div class="form-group">
+    <label for="cause">
+      Cause
+    </label>
+
+    <!-- Input for cause start -->
+    <input type="text" id="cause" name="cause" class="form-control" value="<%= @death.cause %>">
+    <!-- Input for cause end -->
+  </div>
+  <!-- Label and input for cause end -->
+
+  <!-- Label and input for cattle_id start -->
+  <div class="form-group">
+    <label for="cattle_id">
+      Cattle
+    </label>
+
+    <!-- Input for cattle_id start -->
+    <input type="text" id="cattle_id" name="cattle_id" class="form-control" value="<%= @death.cattle_id %>">
+    <!-- Input for cattle_id end -->
+  </div>
+  <!-- Label and input for cattle_id end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Create death
+  </button>
+</form>
+
+<hr>
+
+<a href="/deaths">
+  Go back
+</a>
