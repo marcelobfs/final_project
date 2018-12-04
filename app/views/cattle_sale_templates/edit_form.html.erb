@@ -1,0 +1,68 @@
+<h1>
+  Edit cattle sale #<%= @cattle_sale.id %>
+</h1>
+
+<hr>
+
+<!-- Form cattle_sale start -->
+<form action="/update_cattle_sale/<%= @cattle_sale.id %>" method="post">
+<!-- Form cattle_sale end -->
+
+  <!-- Label and input for weight start -->
+  <div class="form-group">
+    <label for="weight">
+      Weight
+    </label>
+
+    <!-- Input for weight start -->
+    <input type="text" id="weight" name="weight" class="form-control" value="<%= @cattle_sale.weight %>">
+    <!-- Input for weight end -->
+  </div>
+  <!-- Label and input for weight end -->
+
+  <!-- Label and input for price_per_kilo start -->
+  <div class="form-group">
+    <label for="price_per_kilo">
+      Price per kilo
+    </label>
+
+    <!-- Input for price_per_kilo start -->
+    <input type="text" id="price_per_kilo" name="price_per_kilo" class="form-control" value="<%= @cattle_sale.price_per_kilo %>">
+    <!-- Input for price_per_kilo end -->
+  </div>
+  <!-- Label and input for price_per_kilo end -->
+
+  <!-- Label and input for earring_id start -->
+  <div class="form-group">
+    <label for="earring_id">
+      Earring
+    </label>
+
+    <!-- Input for earring_id start -->
+    <input type="text" id="earring_id" name="earring_id" class="form-control" value="<%= @cattle_sale.earring_id %>">
+    <!-- Input for earring_id end -->
+  </div>
+  <!-- Label and input for earring_id end -->
+
+  <!-- Label and input for cattle_id start -->
+  <div class="form-group">
+    <label for="cattle_id">
+      Cattle
+    </label>
+
+    <!-- Input for cattle_id start -->
+    <input type="text" id="cattle_id" name="cattle_id" class="form-control" value="<%= @cattle_sale.cattle_id %>">
+    <!-- Input for cattle_id end -->
+  </div>
+  <!-- Label and input for cattle_id end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Update cattle sale
+  </button>
+</form>
+
+<hr>
+
+<a href="/cattle_sales">
+  Go back
+</a>
