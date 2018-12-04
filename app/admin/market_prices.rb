@@ -1,4 +1,6 @@
 ActiveAdmin.register MarketPrice do
+
+ permit_params :observation, :gender, :current_price, :thirty_days_price, :age_group
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
