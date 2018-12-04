@@ -5,6 +5,8 @@ class Pregnancy < ApplicationRecord
 
   # Validations
 
+  validates :earring_id, :uniqueness => true
+
   validates :earring_id, :presence => true
 
   validates :earring_id, :length => { :minimum => 2, :maximum => 4 }
