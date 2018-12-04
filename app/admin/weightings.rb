@@ -1,4 +1,6 @@
 ActiveAdmin.register Weighting do
+
+ permit_params :earring_id, :weight, :cattle_id, :lot
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
