@@ -1,4 +1,6 @@
 ActiveAdmin.register Pregnancy do
+
+ permit_params :earring_id, :bull_name, :born, :cattle_id
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
