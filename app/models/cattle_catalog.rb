@@ -1,6 +1,10 @@
 class CattleCatalog < ApplicationRecord
   # Direct associations
 
+  has_one    :cattle_sale,
+             :foreign_key => "cattle_id",
+             :dependent => :destroy
+
   has_one    :death,
              :foreign_key => "cattle_id",
              :dependent => :destroy

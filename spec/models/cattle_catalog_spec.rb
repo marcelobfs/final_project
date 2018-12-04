@@ -4,6 +4,8 @@ RSpec.describe CattleCatalog, type: :model do
   
     describe "Direct Associations" do
 
+    it { should have_one(:cattle_sale) }
+
     it { should have_one(:death) }
 
     it { should have_many(:vaccinations) }
