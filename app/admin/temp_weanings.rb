@@ -1,4 +1,6 @@
 ActiveAdmin.register TempWeaning do
+
+ permit_params :earring_id, :first_weight, :estimated_price_per_kilo
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
