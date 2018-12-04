@@ -78,7 +78,11 @@
 
         <!-- Display weighting.cattle_id start -->
         <td>
-          <%= weighting.cattle.earring_id %>
+          <% if weighting.cattle.present? %>
+            <a href="/cattle_catalogs/<%= weighting.cattle.id %>">
+              <%= weighting.cattle.earring_id %>
+            </a>
+          <% end %>
         </td>
         <!-- Display weighting.cattle_id end -->
 

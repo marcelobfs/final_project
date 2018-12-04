@@ -74,7 +74,11 @@
 
         <!-- Display vaccination.cattle_id start -->
         <td>
-          <%= vaccination.cattle.earring_id %>
+          <% if vaccination.cattle.present? %>
+            <a href="/cattle_catalogs/<%= vaccination.cattle.id %>">
+              <%= vaccination.cattle.earring_id %>
+            </a>
+          <% end %>
         </td>
         <!-- Display vaccination.cattle_id end -->
 

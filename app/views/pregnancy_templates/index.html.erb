@@ -84,7 +84,11 @@
 
         <!-- Display pregnancy.cattle_id start -->
         <td>
-          <%= pregnancy.cattle.earring_id %>
+          <% if pregnancy.cattle.present? %>
+            <a href="/cattle_catalogs/<%= pregnancy.cattle.id %>">
+              <%= pregnancy.cattle.earring_id %>
+            </a>
+          <% end %>
         </td>
         <!-- Display pregnancy.cattle_id end -->
 
