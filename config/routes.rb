@@ -1,4 +1,23 @@
 Rails.application.routes.draw do
+  # Routes for the Temp birth resource:
+
+  # CREATE
+  get("/temp_births/new", { :controller => "temp_births", :action => "new_form" })
+  post("/create_temp_birth", { :controller => "temp_births", :action => "create_row" })
+
+  # READ
+  get("/temp_births", { :controller => "temp_births", :action => "index" })
+  get("/temp_births/:id_to_display", { :controller => "temp_births", :action => "show" })
+
+  # UPDATE
+  get("/temp_births/:prefill_with_id/edit", { :controller => "temp_births", :action => "edit_form" })
+  post("/update_temp_birth/:id_to_modify", { :controller => "temp_births", :action => "update_row" })
+
+  # DELETE
+  get("/delete_temp_birth/:id_to_remove", { :controller => "temp_births", :action => "destroy_row" })
+
+  #------------------------------
+
   # Routes for the Pregnancy resource:
 
   # CREATE
