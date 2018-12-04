@@ -1,0 +1,182 @@
+<div class="row mb-3">
+  <div class="col-md-12">
+    <h1>
+      All cattle catalogs
+    </h1>
+
+    <a href="/cattle_catalogs/new" class="btn btn-block btn-outline-secondary">
+      Add a new cattle catalog
+    </a>
+  </div>
+</div>
+
+<!-- Ransack Code start -->
+
+<!-- Ransack Code end -->
+
+<!-- Location Map Code start -->
+
+<!-- Location Map Code end -->
+
+<hr>
+
+<div class="row mb-3">
+  <div class="col-md-12">
+    <table class="table">
+      <tr>
+        <th>
+          ID
+        </th>
+
+        <th>
+          First weight
+        </th>
+
+        <th>
+          Source
+        </th>
+
+        <th>
+          Race
+        </th>
+
+        <th>
+          Gender
+        </th>
+
+        <th>
+          Price per kilo
+        </th>
+
+        <th>
+          Father
+        </th>
+
+        <th>
+          Earring
+        </th>
+
+        <th>
+          Purchase or weaning date
+        </th>
+
+        <th>
+          Mother earring
+        </th>
+
+        <th>
+          Birthdate
+        </th>
+
+        <th>
+          Status
+        </th>
+
+        <th>
+          Created at
+        </th>
+
+        <th>
+          Updated at
+        </th>
+
+        <th>
+        </th>
+      </tr>
+
+      <% @cattle_catalogs.each do |cattle_catalog| %>
+      <tr>
+        <!-- Display cattle_catalog.id start -->
+        <td>
+          <%= cattle_catalog.id %>
+        </td>
+        <!-- Display cattle_catalog.id end -->
+
+        <!-- Display cattle_catalog.first_weight start -->
+        <td>
+          <%= cattle_catalog.first_weight %>
+        </td>
+        <!-- Display cattle_catalog.first_weight end -->
+
+        <!-- Display cattle_catalog.source start -->
+        <td>
+          <%= cattle_catalog.source %>
+        </td>
+        <!-- Display cattle_catalog.source end -->
+
+        <!-- Display cattle_catalog.race start -->
+        <td>
+          <%= cattle_catalog.race %>
+        </td>
+        <!-- Display cattle_catalog.race end -->
+
+        <!-- Display cattle_catalog.gender start -->
+        <td>
+          <%= cattle_catalog.gender %>
+        </td>
+        <!-- Display cattle_catalog.gender end -->
+
+        <!-- Display cattle_catalog.price_per_kilo start -->
+        <td>
+          <%= cattle_catalog.price_per_kilo %>
+        </td>
+        <!-- Display cattle_catalog.price_per_kilo end -->
+
+        <!-- Display cattle_catalog.father start -->
+        <td>
+          <%= cattle_catalog.father %>
+        </td>
+        <!-- Display cattle_catalog.father end -->
+
+        <!-- Display cattle_catalog.earring_id start -->
+        <td>
+          <%= cattle_catalog.earring_id %>
+        </td>
+        <!-- Display cattle_catalog.earring_id end -->
+
+        <!-- Display cattle_catalog.purchase_or_weaning_date start -->
+        <td>
+          <%= cattle_catalog.purchase_or_weaning_date %>
+        </td>
+        <!-- Display cattle_catalog.purchase_or_weaning_date end -->
+
+        <!-- Display cattle_catalog.mother_earring_id start -->
+        <td>
+          <%= cattle_catalog.mother_earring_id %>
+        </td>
+        <!-- Display cattle_catalog.mother_earring_id end -->
+
+        <!-- Display cattle_catalog.birthdate start -->
+        <td>
+          <%= cattle_catalog.birthdate %>
+        </td>
+        <!-- Display cattle_catalog.birthdate end -->
+
+        <!-- Display cattle_catalog.status start -->
+        <td>
+          <%= cattle_catalog.status %>
+        </td>
+        <!-- Display cattle_catalog.status end -->
+
+        <!-- Display cattle_catalog.created_at start -->
+        <td>
+          <%= time_ago_in_words(cattle_catalog.created_at) %> ago
+        </td>
+        <!-- Display cattle_catalog.created_at end -->
+
+        <!-- Display cattle_catalog.updated_at start -->
+        <td>
+          <%= time_ago_in_words(cattle_catalog.updated_at) %> ago
+        </td>
+        <!-- Display cattle_catalog.updated_at end -->
+
+        <td>
+          <a href="/cattle_catalogs/<%= cattle_catalog.id %>">
+            Show details
+          </a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>

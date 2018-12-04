@@ -1,0 +1,154 @@
+<div class="row mb-3">
+  <div class="col-md-8 offset-md-2">
+    <h1>
+      Cattle catalog #<%= @cattle_catalog.id %> details
+    </h1>
+
+    <div class="row mb-3">
+      <div class="col">
+        <a href="/cattle_catalogs" class="btn btn-block btn-outline-secondary">
+          Go back
+        </a>
+      </div>
+
+      <!-- Edit link cattle_catalog start -->
+      <div class="col">
+        <a href="/cattle_catalogs/<%= @cattle_catalog.id %>/edit" class="btn btn-block btn-outline-secondary">
+          Edit cattle catalog
+        </a>
+      </div>
+      <!-- Edit link cattle_catalog end -->
+
+      <!-- Delete link cattle_catalog start -->
+      <div class="col">
+        <a href="/delete_cattle_catalog/<%= @cattle_catalog.id %>" class="btn btn-block btn-outline-secondary">
+          Delete cattle catalog
+        </a>
+      </div>
+      <!-- Delete link cattle_catalog end -->
+    </div>
+
+    <dl>
+      <dt>
+        First weight
+      </dt>
+      <!-- Display first_weight start -->
+      <dd>
+        <%= @cattle_catalog.first_weight %>
+      </dd>
+      <!-- Display first_weight end -->
+
+      <dt>
+        Source
+      </dt>
+      <!-- Display source start -->
+      <dd>
+        <%= @cattle_catalog.source %>
+      </dd>
+      <!-- Display source end -->
+
+      <dt>
+        Race
+      </dt>
+      <!-- Display race start -->
+      <dd>
+        <%= @cattle_catalog.race %>
+      </dd>
+      <!-- Display race end -->
+
+      <dt>
+        Gender
+      </dt>
+      <!-- Display gender start -->
+      <dd>
+        <%= @cattle_catalog.gender %>
+      </dd>
+      <!-- Display gender end -->
+
+      <dt>
+        Price per kilo
+      </dt>
+      <!-- Display price_per_kilo start -->
+      <dd>
+        <%= @cattle_catalog.price_per_kilo %>
+      </dd>
+      <!-- Display price_per_kilo end -->
+
+      <dt>
+        Father
+      </dt>
+      <!-- Display father start -->
+      <dd>
+        <%= @cattle_catalog.father %>
+      </dd>
+      <!-- Display father end -->
+
+      <dt>
+        Earring
+      </dt>
+      <!-- Display earring_id start -->
+      <dd>
+        <%= @cattle_catalog.earring_id %>
+      </dd>
+      <!-- Display earring_id end -->
+
+      <dt>
+        Purchase or weaning date
+      </dt>
+      <!-- Display purchase_or_weaning_date start -->
+      <dd>
+        <%= @cattle_catalog.purchase_or_weaning_date %>
+      </dd>
+      <!-- Display purchase_or_weaning_date end -->
+
+      <dt>
+        Mother earring
+      </dt>
+      <!-- Display mother_earring_id start -->
+      <dd>
+        <%= @cattle_catalog.mother_earring_id %>
+      </dd>
+      <!-- Display mother_earring_id end -->
+
+      <dt>
+        Birthdate
+      </dt>
+      <!-- Display birthdate start -->
+      <dd>
+        <%= @cattle_catalog.birthdate %>
+      </dd>
+      <!-- Display birthdate end -->
+
+      <dt>
+        Status
+      </dt>
+      <!-- Display status start -->
+      <dd>
+        <%= @cattle_catalog.status %>
+      </dd>
+      <!-- Display status end -->
+
+      <dt>
+        Created at
+      </dt>
+      <!-- Display created_at start -->
+      <dd>
+        <%= time_ago_in_words(@cattle_catalog.created_at) %> ago
+      </dd>
+      <!-- Display created_at end -->
+
+      <dt>
+        Updated at
+      </dt>
+      <!-- Display updated_at start -->
+      <dd>
+        <%= time_ago_in_words(@cattle_catalog.updated_at) %> ago
+      </dd>
+      <!-- Display updated_at end -->
+    </dl>
+  </div>
+</div>
+
+<!-- Show Page Customization starts -->
+
+<!-- Show Page Customization end -->
