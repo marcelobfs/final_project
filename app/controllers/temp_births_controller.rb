@@ -1,6 +1,6 @@
 class TempBirthsController < ApplicationController
   def index
-    @temp_births = TempBirth.all
+    @temp_births = TempBirth.page(params[:page]).per(10)
 
     render("temp_birth_templates/index.html.erb")
   end

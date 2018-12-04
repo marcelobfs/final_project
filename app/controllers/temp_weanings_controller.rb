@@ -1,6 +1,6 @@
 class TempWeaningsController < ApplicationController
   def index
-    @temp_weanings = TempWeaning.all
+    @temp_weanings = TempWeaning.page(params[:page]).per(10)
 
     render("temp_weaning_templates/index.html.erb")
   end
