@@ -1,4 +1,23 @@
 Rails.application.routes.draw do
+  # Routes for the Temp weaning resource:
+
+  # CREATE
+  get("/temp_weanings/new", { :controller => "temp_weanings", :action => "new_form" })
+  post("/create_temp_weaning", { :controller => "temp_weanings", :action => "create_row" })
+
+  # READ
+  get("/temp_weanings", { :controller => "temp_weanings", :action => "index" })
+  get("/temp_weanings/:id_to_display", { :controller => "temp_weanings", :action => "show" })
+
+  # UPDATE
+  get("/temp_weanings/:prefill_with_id/edit", { :controller => "temp_weanings", :action => "edit_form" })
+  post("/update_temp_weaning/:id_to_modify", { :controller => "temp_weanings", :action => "update_row" })
+
+  # DELETE
+  get("/delete_temp_weaning/:id_to_remove", { :controller => "temp_weanings", :action => "destroy_row" })
+
+  #------------------------------
+
   # Routes for the Temp birth resource:
 
   # CREATE

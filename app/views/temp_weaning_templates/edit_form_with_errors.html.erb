@@ -1,0 +1,65 @@
+<!-- Validation failure messages -->
+<% if @temp_weaning.errors.any? %>
+  <% @temp_weaning.errors.full_messages.each do |message| %>
+    <div class="alert">
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+<h1>
+  Edit temp weaning #<%= @temp_weaning.id %>
+</h1>
+
+<hr>
+
+<!-- Form temp_weaning start -->
+<form action="/update_temp_weaning/<%= @temp_weaning.id %>" method="post">
+<!-- Form temp_weaning end -->
+
+  <!-- Label and input for earring_id start -->
+  <div class="form-group">
+    <label for="earring_id">
+      Earring
+    </label>
+
+    <!-- Input for earring_id start -->
+    <input type="text" id="earring_id" name="earring_id" class="form-control" value="<%= @temp_weaning.earring_id %>">
+    <!-- Input for earring_id end -->
+  </div>
+  <!-- Label and input for earring_id end -->
+
+  <!-- Label and input for first_weight start -->
+  <div class="form-group">
+    <label for="first_weight">
+      First weight
+    </label>
+
+    <!-- Input for first_weight start -->
+    <input type="text" id="first_weight" name="first_weight" class="form-control" value="<%= @temp_weaning.first_weight %>">
+    <!-- Input for first_weight end -->
+  </div>
+  <!-- Label and input for first_weight end -->
+
+  <!-- Label and input for estimated_price_per_kilo start -->
+  <div class="form-group">
+    <label for="estimated_price_per_kilo">
+      Estimated price per kilo
+    </label>
+
+    <!-- Input for estimated_price_per_kilo start -->
+    <input type="text" id="estimated_price_per_kilo" name="estimated_price_per_kilo" class="form-control" value="<%= @temp_weaning.estimated_price_per_kilo %>">
+    <!-- Input for estimated_price_per_kilo end -->
+  </div>
+  <!-- Label and input for estimated_price_per_kilo end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Update temp weaning
+  </button>
+</form>
+
+<hr>
+
+<a href="/temp_weanings">
+  Go back
+</a>

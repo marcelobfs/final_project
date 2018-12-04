@@ -1,0 +1,82 @@
+<div class="row mb-3">
+  <div class="col-md-8 offset-md-2">
+    <h1>
+      Temp weaning #<%= @temp_weaning.id %> details
+    </h1>
+
+    <div class="row mb-3">
+      <div class="col">
+        <a href="/temp_weanings" class="btn btn-block btn-outline-secondary">
+          Go back
+        </a>
+      </div>
+
+      <!-- Edit link temp_weaning start -->
+      <div class="col">
+        <a href="/temp_weanings/<%= @temp_weaning.id %>/edit" class="btn btn-block btn-outline-secondary">
+          Edit temp weaning
+        </a>
+      </div>
+      <!-- Edit link temp_weaning end -->
+
+      <!-- Delete link temp_weaning start -->
+      <div class="col">
+        <a href="/delete_temp_weaning/<%= @temp_weaning.id %>" class="btn btn-block btn-outline-secondary">
+          Delete temp weaning
+        </a>
+      </div>
+      <!-- Delete link temp_weaning end -->
+    </div>
+
+    <dl>
+      <dt>
+        Earring
+      </dt>
+      <!-- Display earring_id start -->
+      <dd>
+        <%= @temp_weaning.earring_id %>
+      </dd>
+      <!-- Display earring_id end -->
+
+      <dt>
+        First weight
+      </dt>
+      <!-- Display first_weight start -->
+      <dd>
+        <%= @temp_weaning.first_weight %>
+      </dd>
+      <!-- Display first_weight end -->
+
+      <dt>
+        Estimated price per kilo
+      </dt>
+      <!-- Display estimated_price_per_kilo start -->
+      <dd>
+        <%= @temp_weaning.estimated_price_per_kilo %>
+      </dd>
+      <!-- Display estimated_price_per_kilo end -->
+
+      <dt>
+        Created at
+      </dt>
+      <!-- Display created_at start -->
+      <dd>
+        <%= time_ago_in_words(@temp_weaning.created_at) %> ago
+      </dd>
+      <!-- Display created_at end -->
+
+      <dt>
+        Updated at
+      </dt>
+      <!-- Display updated_at start -->
+      <dd>
+        <%= time_ago_in_words(@temp_weaning.updated_at) %> ago
+      </dd>
+      <!-- Display updated_at end -->
+    </dl>
+  </div>
+</div>
+
+<!-- Show Page Customization starts -->
+
+<!-- Show Page Customization end -->
